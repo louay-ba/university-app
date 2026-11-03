@@ -1,32 +1,54 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import "./App.css";
+import StudentCard from "C:/framework/university-app/src/componants/StudentCard.jsx";
+import studentImage from "C:/framework/university-app/src/assets/student.jpg";
+
+const etudiants = [
+  {
+    prenom: "Slim",
+    nom: "Boubaker",
+    email: "slimboubaker@gmail.com",
+    telephone: "+216 99 999 999",
+    filiere: "Génie Logiciel et Systèmes d'Information",
+    anneeEtude: "2ème année",
+    groupe: "GLSI 2",
+    ville: "Mahdia",
+    image: studentImage,
+  },
+  {
+    prenom: "Sarra",
+    nom: "Trabelsi",
+    email: "sarra.trabelsi@gmail.com",
+    telephone: "+216 22 345 678",
+    filiere: "Génie Logiciel et Systèmes d'Information",
+    anneeEtude: "2ème année",
+    groupe: "GLSI 1",
+    ville: "Sousse",
+  },
+  {
+    prenom: "Mariem",
+    nom: "Khalfallah",
+    email: "mariem.khalfallah@gmail.com",
+    telephone: "+216 27 567 890",
+    filiere: "Génie Logiciel et Systèmes d'Information",
+  },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      
-          <section>
-              <div>
-                  <img src="C:\Users\CHINWA GSM\Images\etudiant3.jpg" alt="photo etudiant" width="200"/>
-                  <br></br>
-                  <br></br>
-                  <h1 class="h1">Fiche Etudiant</h1>
-                  <p>Email : SlimBoubaker@gmail.com</p>
-                  <p>Telephone : +216 99 999 999</p>
-                  <p>Filiére :Genie Logiciel et systéme d'informatique</p>
-                  <p>Année d'etude : 2026-2027</p>
-                  <p>Groupe  : GlS 2</p>
-                  <p>ville : Mahdia</p>
-                  <button class="h2" >contacter</button>
-              </div>
-          </section>
-    </>
-  )
+    <div className="container">
+      <StudentCard
+        prenom={etudiant.prenom}
+        nom={etudiant.nom}
+        email={etudiant.email}
+        telephone={etudiant.telephone}
+        filiere={etudiant.filiere}
+        anneeEtude={etudiant.anneeEtude}
+        groupe={etudiant.groupe}
+        ville={etudiant.ville}
+        image={etudiant.image}
+      />
+    </div>
+  );
 }
 
-export default App
+export default App;
